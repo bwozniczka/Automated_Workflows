@@ -2,7 +2,6 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 *.egg-info/
-work/
 dist/
 build/
 .ipynb_checkpoints/
@@ -25,3 +24,11 @@ _netrc
 *.db-wal
 *.db-shm
 lab06_windows_fix_backup/
+
+# Generated runtime: keep submission evidence (manifests, reports, personal inputs)
+work/**/outputs/
+work/**/logs/
+work/**/*.lock
+work/demo_preexisting*/
+work/demo/inputs/
+work/demo/report/inspect_preview.png

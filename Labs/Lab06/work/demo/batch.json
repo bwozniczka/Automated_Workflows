@@ -1,0 +1,1827 @@
+{
+  "batch_id": "batch-d6af31a5111d5c4eec9f2faa43e10932b6a5e1bf015451a0d354f5294b0bada7",
+  "frozen": {
+    "schema_version": 1,
+    "max_attempts": 2,
+    "members": [
+      {
+        "member_id": "S2A_T34UDA_20250604T094637_L2A-river-mndwi",
+        "request_id": "request-bd4b1282570e6e7af234d2c0e9d59f904e3ccd0855e290e0f27388ac9b91aef2",
+        "spec": {
+          "stage": "optical_product_v1",
+          "product": {
+            "name": "mndwi",
+            "version": "1.0.0",
+            "source_sha256": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+            "required_bands": [
+              "green",
+              "swir16"
+            ],
+            "output_roles": [
+              "index",
+              "water"
+            ],
+            "primary_role": "index",
+            "nominal_range": [
+              -1.0,
+              1.0
+            ]
+          },
+          "parameters": {
+            "epsilon": 1e-06,
+            "threshold": 0.0
+          },
+          "preparation": {
+            "resolution_m": 20,
+            "mask_policy": "scl",
+            "excluded_scl": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          "grid": {
+            "crs": "EPSG:32634",
+            "transform": [
+              20,
+              0,
+              421940,
+              0,
+              -20,
+              5545880
+            ],
+            "shape": [
+              114,
+              110
+            ],
+            "aoi_bbox": [
+              19.91,
+              50.04,
+              19.94,
+              50.06
+            ]
+          },
+          "inputs": {
+            "green": {
+              "artifact_id": "input-3774c3d852e4c84c00d2768c859940f8669a41fc28b15bb9201e0c4f0d96f20b",
+              "source_artifact_id": "3774c3d852e4c84c00d2768c859940f8669a41fc28b15bb9201e0c4f0d96f20b",
+              "sha256": "aa7b49a2a28e6d57bc2cc5b63233900363c30d38bca5da9c7daceb651b6c2424",
+              "size_bytes": 76258,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "green",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  229,
+                  221
+                ],
+                "source_shape": [
+                  10980,
+                  10980
+                ],
+                "source_transform": [
+                  10.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -10.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/B03.tif",
+                "transform": [
+                  10.0,
+                  0.0,
+                  421930.0,
+                  0.0,
+                  -10.0,
+                  5545890.0
+                ],
+                "window": [
+                  2197,
+                  5415,
+                  221,
+                  229
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "green",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2A_T34UDA_20250604T094637_L2A",
+                "metadata_sha256": "ae1466dc0e625cc7b21f646eb2503f1ba3cc5f038742a89fcd2a4b1730f2c4b1",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/B03.tif"
+              }
+            },
+            "scl": {
+              "artifact_id": "input-02f3139b3973592be32d8400647a245d0ab28a4b75f28bce47bfd5b470902bbb",
+              "source_artifact_id": "02f3139b3973592be32d8400647a245d0ab28a4b75f28bce47bfd5b470902bbb",
+              "sha256": "76895652a1f4ab65a96d8ee7ab9fccf7af91c83bb31ebcc4225ac2ffdaf05551",
+              "size_bytes": 2554,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "scl",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint8",
+                "nodata": 0,
+                "offset": 0.0,
+                "recipe": "native-context-v1",
+                "scale": 1.0,
+                "shape": [
+                  116,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/SCL.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  421920.0,
+                  0.0,
+                  -20.0,
+                  5545900.0
+                ],
+                "window": [
+                  1098,
+                  2707,
+                  112,
+                  116
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "scl",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2A_T34UDA_20250604T094637_L2A",
+                "metadata_sha256": "b30d6cd82225516e1fb1806ff179f31e8b198d816dec1ee78d482ebf6f7056b7",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/SCL.tif"
+              }
+            },
+            "swir16": {
+              "artifact_id": "input-ef0efeb0aa36ae689e0d10bd14a77e053a60490aee7cbe56fb87edb8735250c3",
+              "source_artifact_id": "ef0efeb0aa36ae689e0d10bd14a77e053a60490aee7cbe56fb87edb8735250c3",
+              "sha256": "ebeb369d1be5dd7a73e79a4e34cd194881e28777197f008434a153adebe86e45",
+              "size_bytes": 21878,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "swir16",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  116,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/B11.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  421920.0,
+                  0.0,
+                  -20.0,
+                  5545900.0
+                ],
+                "window": [
+                  1098,
+                  2707,
+                  112,
+                  116
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "swir16",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2A_T34UDA_20250604T094637_L2A",
+                "metadata_sha256": "c5a06fbcbb3388eeeaf93fd36032697e438b058fa489a8322a2e557709dcdb71",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/B11.tif"
+              }
+            }
+          },
+          "environment": {
+            "policy": "exact_environment_v1",
+            "package": "1.0.0",
+            "python": "3.12.13",
+            "system": "Darwin",
+            "machine": "arm64",
+            "numpy": "2.4.4",
+            "rasterio": "1.5.0",
+            "gdal": "3.12.1",
+            "proj": "9.7.1",
+            "processing_code_sha256": {
+              "common.py": "d0d36981e1e3d93ab14b1fd65dc4dbb4f4cb8f770d185a1a058860c381354c1a",
+              "database.py": "510e12dbba64d5c471f113a4fe50fd5ce3ac5d3267310bd86b2e3444ebd44754",
+              "planning.py": "af54acffeb2a86aa54090580786d8b9c1fa255526bb3595a0856829036acf019",
+              "products.py": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+              "preparation.py": "520c3be7af0ac541cba76297dae8d19558d6cd9373b53641e7c090b7ddc46023",
+              "runner.py": "2970a72ca8bad9f5605b19141eeb5c7a423db94cc3e6b5c0d68c36b69ba5c0ca",
+              "acquisition.py": "7dccd2cd71716d99f11256274f54dbd48c564425c3b4c787b4fde323cfbe4f53",
+              "schemas/03_processing.sql": "72a1d020ddebe2739d6954631b3511778ac0c084329b06a6ffd8a71a47c142ff",
+              "schemas/04_batches.sql": "f0ff67c6d3012845e6337ce51ea6c0db5f0122855a5574fb4f88723fc4087e44"
+            }
+          }
+        }
+      },
+      {
+        "member_id": "S2A_T34UDA_20250604T094637_L2A-east-mndwi",
+        "request_id": "request-9c896bd8c494e71d830e2d0ef5465368b40dbd99d0e2ddad97817879a449751d",
+        "spec": {
+          "stage": "optical_product_v1",
+          "product": {
+            "name": "mndwi",
+            "version": "1.0.0",
+            "source_sha256": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+            "required_bands": [
+              "green",
+              "swir16"
+            ],
+            "output_roles": [
+              "index",
+              "water"
+            ],
+            "primary_role": "index",
+            "nominal_range": [
+              -1.0,
+              1.0
+            ]
+          },
+          "parameters": {
+            "epsilon": 1e-06,
+            "threshold": 0.0
+          },
+          "preparation": {
+            "resolution_m": 20,
+            "mask_policy": "scl",
+            "excluded_scl": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          "grid": {
+            "crs": "EPSG:32634",
+            "transform": [
+              20,
+              0,
+              424080,
+              0,
+              -20,
+              5545840
+            ],
+            "shape": [
+              113,
+              110
+            ],
+            "aoi_bbox": [
+              19.94,
+              50.04,
+              19.97,
+              50.06
+            ]
+          },
+          "inputs": {
+            "green": {
+              "artifact_id": "input-c8d2de1a542ceeabcb150fc6dab3e1dca33b88c3dd8a148ced4167a18445e48a",
+              "source_artifact_id": "c8d2de1a542ceeabcb150fc6dab3e1dca33b88c3dd8a148ced4167a18445e48a",
+              "sha256": "346012ef986cc5bdc64b0f5b71f773eb66fc33f0890a6438783c36849c9743ef",
+              "size_bytes": 76864,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "green",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  228,
+                  221
+                ],
+                "source_shape": [
+                  10980,
+                  10980
+                ],
+                "source_transform": [
+                  10.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -10.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/B03.tif",
+                "transform": [
+                  10.0,
+                  0.0,
+                  424080.0,
+                  0.0,
+                  -10.0,
+                  5545850.0
+                ],
+                "window": [
+                  2412,
+                  5419,
+                  221,
+                  228
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "green",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2A_T34UDA_20250604T094637_L2A",
+                "metadata_sha256": "ae1466dc0e625cc7b21f646eb2503f1ba3cc5f038742a89fcd2a4b1730f2c4b1",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/B03.tif"
+              }
+            },
+            "scl": {
+              "artifact_id": "input-6eaf900538c63a49deeeda2d390eb8f226499b945b81fcb9d050f6322438fb19",
+              "source_artifact_id": "6eaf900538c63a49deeeda2d390eb8f226499b945b81fcb9d050f6322438fb19",
+              "sha256": "702ab3a969749b698f2adc8acd6fac04de053970c8f9590749801b4e75e89778",
+              "size_bytes": 2848,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "scl",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint8",
+                "nodata": 0,
+                "offset": 0.0,
+                "recipe": "native-context-v1",
+                "scale": 1.0,
+                "shape": [
+                  115,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/SCL.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  424060.0,
+                  0.0,
+                  -20.0,
+                  5545860.0
+                ],
+                "window": [
+                  1205,
+                  2709,
+                  112,
+                  115
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "scl",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2A_T34UDA_20250604T094637_L2A",
+                "metadata_sha256": "b30d6cd82225516e1fb1806ff179f31e8b198d816dec1ee78d482ebf6f7056b7",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/SCL.tif"
+              }
+            },
+            "swir16": {
+              "artifact_id": "input-264c99ff8e6a6d4ee7afee8cd91d3f40faa69b8fd52ca4fb0bb287f15ebe04fb",
+              "source_artifact_id": "264c99ff8e6a6d4ee7afee8cd91d3f40faa69b8fd52ca4fb0bb287f15ebe04fb",
+              "sha256": "7d2f36443d67b1e3506bd0cf24320d2558592737839e602ab8675cb6c0a8ab0a",
+              "size_bytes": 21740,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "swir16",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  115,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/B11.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  424060.0,
+                  0.0,
+                  -20.0,
+                  5545860.0
+                ],
+                "window": [
+                  1205,
+                  2709,
+                  112,
+                  115
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "swir16",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2A_T34UDA_20250604T094637_L2A",
+                "metadata_sha256": "c5a06fbcbb3388eeeaf93fd36032697e438b058fa489a8322a2e557709dcdb71",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2A_T34UDA_20250604T094637_L2A/B11.tif"
+              }
+            }
+          },
+          "environment": {
+            "policy": "exact_environment_v1",
+            "package": "1.0.0",
+            "python": "3.12.13",
+            "system": "Darwin",
+            "machine": "arm64",
+            "numpy": "2.4.4",
+            "rasterio": "1.5.0",
+            "gdal": "3.12.1",
+            "proj": "9.7.1",
+            "processing_code_sha256": {
+              "common.py": "d0d36981e1e3d93ab14b1fd65dc4dbb4f4cb8f770d185a1a058860c381354c1a",
+              "database.py": "510e12dbba64d5c471f113a4fe50fd5ce3ac5d3267310bd86b2e3444ebd44754",
+              "planning.py": "af54acffeb2a86aa54090580786d8b9c1fa255526bb3595a0856829036acf019",
+              "products.py": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+              "preparation.py": "520c3be7af0ac541cba76297dae8d19558d6cd9373b53641e7c090b7ddc46023",
+              "runner.py": "2970a72ca8bad9f5605b19141eeb5c7a423db94cc3e6b5c0d68c36b69ba5c0ca",
+              "acquisition.py": "7dccd2cd71716d99f11256274f54dbd48c564425c3b4c787b4fde323cfbe4f53",
+              "schemas/03_processing.sql": "72a1d020ddebe2739d6954631b3511778ac0c084329b06a6ffd8a71a47c142ff",
+              "schemas/04_batches.sql": "f0ff67c6d3012845e6337ce51ea6c0db5f0122855a5574fb4f88723fc4087e44"
+            }
+          }
+        }
+      },
+      {
+        "member_id": "S2C_T34UDA_20250605T095638_L2A-river-mndwi",
+        "request_id": "request-2bb2003c08b4d9019efb833b99c3bf239d30d872b3ce0a1df8aef5e1b867797b",
+        "spec": {
+          "stage": "optical_product_v1",
+          "product": {
+            "name": "mndwi",
+            "version": "1.0.0",
+            "source_sha256": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+            "required_bands": [
+              "green",
+              "swir16"
+            ],
+            "output_roles": [
+              "index",
+              "water"
+            ],
+            "primary_role": "index",
+            "nominal_range": [
+              -1.0,
+              1.0
+            ]
+          },
+          "parameters": {
+            "epsilon": 1e-06,
+            "threshold": 0.0
+          },
+          "preparation": {
+            "resolution_m": 20,
+            "mask_policy": "scl",
+            "excluded_scl": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          "grid": {
+            "crs": "EPSG:32634",
+            "transform": [
+              20,
+              0,
+              421940,
+              0,
+              -20,
+              5545880
+            ],
+            "shape": [
+              114,
+              110
+            ],
+            "aoi_bbox": [
+              19.91,
+              50.04,
+              19.94,
+              50.06
+            ]
+          },
+          "inputs": {
+            "green": {
+              "artifact_id": "input-f276aa8abf2aa41fd394db4fe4d476639384a4516916740bb3b661ee1546c1f0",
+              "source_artifact_id": "f276aa8abf2aa41fd394db4fe4d476639384a4516916740bb3b661ee1546c1f0",
+              "sha256": "b3a7b533d33e00c3e276510083937173aed51b333beae66ae5085c39a7106f1c",
+              "size_bytes": 77910,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "green",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  229,
+                  221
+                ],
+                "source_shape": [
+                  10980,
+                  10980
+                ],
+                "source_transform": [
+                  10.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -10.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/B03.tif",
+                "transform": [
+                  10.0,
+                  0.0,
+                  421930.0,
+                  0.0,
+                  -10.0,
+                  5545890.0
+                ],
+                "window": [
+                  2197,
+                  5415,
+                  221,
+                  229
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "green",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2C_T34UDA_20250605T095638_L2A",
+                "metadata_sha256": "8bebd8d61340a1811d26f9e3905391617ea70a9eab67633dd7dfe64a3adbc92a",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/B03.tif"
+              }
+            },
+            "scl": {
+              "artifact_id": "input-4ce2ebda774ee97c19cb6201620dff13fe22dac39a1cbd2b9a5ee01369e93df7",
+              "source_artifact_id": "4ce2ebda774ee97c19cb6201620dff13fe22dac39a1cbd2b9a5ee01369e93df7",
+              "sha256": "13e4674f659f0d0fb72e8713039028193230e21a57b9b9e253b3ef8c051c492f",
+              "size_bytes": 3048,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "scl",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint8",
+                "nodata": 0,
+                "offset": 0.0,
+                "recipe": "native-context-v1",
+                "scale": 1.0,
+                "shape": [
+                  116,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/SCL.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  421920.0,
+                  0.0,
+                  -20.0,
+                  5545900.0
+                ],
+                "window": [
+                  1098,
+                  2707,
+                  112,
+                  116
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "scl",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2C_T34UDA_20250605T095638_L2A",
+                "metadata_sha256": "5bb7f37e1ba8a9bbd63611ddfe2f79844d14c853576c8ede276b589d2c6ca039",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/SCL.tif"
+              }
+            },
+            "swir16": {
+              "artifact_id": "input-e66be95e8fea3c35609d5fb26930ab91fc1a8e5552abf0ac9a99daadd34f269c",
+              "source_artifact_id": "e66be95e8fea3c35609d5fb26930ab91fc1a8e5552abf0ac9a99daadd34f269c",
+              "sha256": "fead3950ab9dc6cc895110698ad0aa9697647a9753752d8e1e65f26426788534",
+              "size_bytes": 22272,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "swir16",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  116,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/B11.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  421920.0,
+                  0.0,
+                  -20.0,
+                  5545900.0
+                ],
+                "window": [
+                  1098,
+                  2707,
+                  112,
+                  116
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "swir16",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2C_T34UDA_20250605T095638_L2A",
+                "metadata_sha256": "19751d2b7bfc78970bd6ff4b4cc22d32b839bd4a665756037039813767232f36",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/B11.tif"
+              }
+            }
+          },
+          "environment": {
+            "policy": "exact_environment_v1",
+            "package": "1.0.0",
+            "python": "3.12.13",
+            "system": "Darwin",
+            "machine": "arm64",
+            "numpy": "2.4.4",
+            "rasterio": "1.5.0",
+            "gdal": "3.12.1",
+            "proj": "9.7.1",
+            "processing_code_sha256": {
+              "common.py": "d0d36981e1e3d93ab14b1fd65dc4dbb4f4cb8f770d185a1a058860c381354c1a",
+              "database.py": "510e12dbba64d5c471f113a4fe50fd5ce3ac5d3267310bd86b2e3444ebd44754",
+              "planning.py": "af54acffeb2a86aa54090580786d8b9c1fa255526bb3595a0856829036acf019",
+              "products.py": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+              "preparation.py": "520c3be7af0ac541cba76297dae8d19558d6cd9373b53641e7c090b7ddc46023",
+              "runner.py": "2970a72ca8bad9f5605b19141eeb5c7a423db94cc3e6b5c0d68c36b69ba5c0ca",
+              "acquisition.py": "7dccd2cd71716d99f11256274f54dbd48c564425c3b4c787b4fde323cfbe4f53",
+              "schemas/03_processing.sql": "72a1d020ddebe2739d6954631b3511778ac0c084329b06a6ffd8a71a47c142ff",
+              "schemas/04_batches.sql": "f0ff67c6d3012845e6337ce51ea6c0db5f0122855a5574fb4f88723fc4087e44"
+            }
+          }
+        }
+      },
+      {
+        "member_id": "S2C_T34UDA_20250605T095638_L2A-east-mndwi",
+        "request_id": "request-9421a55be4f8ff97c812ca3f9001195044292af24f8f7ceb2644b045dfb2572a",
+        "spec": {
+          "stage": "optical_product_v1",
+          "product": {
+            "name": "mndwi",
+            "version": "1.0.0",
+            "source_sha256": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+            "required_bands": [
+              "green",
+              "swir16"
+            ],
+            "output_roles": [
+              "index",
+              "water"
+            ],
+            "primary_role": "index",
+            "nominal_range": [
+              -1.0,
+              1.0
+            ]
+          },
+          "parameters": {
+            "epsilon": 1e-06,
+            "threshold": 0.0
+          },
+          "preparation": {
+            "resolution_m": 20,
+            "mask_policy": "scl",
+            "excluded_scl": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          "grid": {
+            "crs": "EPSG:32634",
+            "transform": [
+              20,
+              0,
+              424080,
+              0,
+              -20,
+              5545840
+            ],
+            "shape": [
+              113,
+              110
+            ],
+            "aoi_bbox": [
+              19.94,
+              50.04,
+              19.97,
+              50.06
+            ]
+          },
+          "inputs": {
+            "green": {
+              "artifact_id": "input-0c92854697a9f5080afc7e1fac64f36ce1d2f839f7642f9c66dadbb2286b73e7",
+              "source_artifact_id": "0c92854697a9f5080afc7e1fac64f36ce1d2f839f7642f9c66dadbb2286b73e7",
+              "sha256": "92a6a7d7f155a207eeb77725587c0cf1b6cc5472637ba6f924ceec9c83bb5f25",
+              "size_bytes": 78258,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "green",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  228,
+                  221
+                ],
+                "source_shape": [
+                  10980,
+                  10980
+                ],
+                "source_transform": [
+                  10.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -10.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/B03.tif",
+                "transform": [
+                  10.0,
+                  0.0,
+                  424080.0,
+                  0.0,
+                  -10.0,
+                  5545850.0
+                ],
+                "window": [
+                  2412,
+                  5419,
+                  221,
+                  228
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "green",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2C_T34UDA_20250605T095638_L2A",
+                "metadata_sha256": "8bebd8d61340a1811d26f9e3905391617ea70a9eab67633dd7dfe64a3adbc92a",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/B03.tif"
+              }
+            },
+            "scl": {
+              "artifact_id": "input-f15c758c4c120b7af4e2259e6e49328d44d8e80d4146020e4eebd4c947db97d4",
+              "source_artifact_id": "f15c758c4c120b7af4e2259e6e49328d44d8e80d4146020e4eebd4c947db97d4",
+              "sha256": "66cc60514572ae98c385aeb3acf4e59eeadd27cc6700e048f610c649dac75b37",
+              "size_bytes": 3010,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "scl",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint8",
+                "nodata": 0,
+                "offset": 0.0,
+                "recipe": "native-context-v1",
+                "scale": 1.0,
+                "shape": [
+                  115,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/SCL.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  424060.0,
+                  0.0,
+                  -20.0,
+                  5545860.0
+                ],
+                "window": [
+                  1205,
+                  2709,
+                  112,
+                  115
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "scl",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2C_T34UDA_20250605T095638_L2A",
+                "metadata_sha256": "5bb7f37e1ba8a9bbd63611ddfe2f79844d14c853576c8ede276b589d2c6ca039",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/SCL.tif"
+              }
+            },
+            "swir16": {
+              "artifact_id": "input-bbe43a8f3a326a527766980930fd454365782c613542411cf58d6369fd10c4ba",
+              "source_artifact_id": "bbe43a8f3a326a527766980930fd454365782c613542411cf58d6369fd10c4ba",
+              "sha256": "20c6f054a698a954d774003c09d57876b366c47c8514942a1699884fa339e906",
+              "size_bytes": 22142,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "swir16",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  115,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/B11.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  424060.0,
+                  0.0,
+                  -20.0,
+                  5545860.0
+                ],
+                "window": [
+                  1205,
+                  2709,
+                  112,
+                  115
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "swir16",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2C_T34UDA_20250605T095638_L2A",
+                "metadata_sha256": "19751d2b7bfc78970bd6ff4b4cc22d32b839bd4a665756037039813767232f36",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2C_T34UDA_20250605T095638_L2A/B11.tif"
+              }
+            }
+          },
+          "environment": {
+            "policy": "exact_environment_v1",
+            "package": "1.0.0",
+            "python": "3.12.13",
+            "system": "Darwin",
+            "machine": "arm64",
+            "numpy": "2.4.4",
+            "rasterio": "1.5.0",
+            "gdal": "3.12.1",
+            "proj": "9.7.1",
+            "processing_code_sha256": {
+              "common.py": "d0d36981e1e3d93ab14b1fd65dc4dbb4f4cb8f770d185a1a058860c381354c1a",
+              "database.py": "510e12dbba64d5c471f113a4fe50fd5ce3ac5d3267310bd86b2e3444ebd44754",
+              "planning.py": "af54acffeb2a86aa54090580786d8b9c1fa255526bb3595a0856829036acf019",
+              "products.py": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+              "preparation.py": "520c3be7af0ac541cba76297dae8d19558d6cd9373b53641e7c090b7ddc46023",
+              "runner.py": "2970a72ca8bad9f5605b19141eeb5c7a423db94cc3e6b5c0d68c36b69ba5c0ca",
+              "acquisition.py": "7dccd2cd71716d99f11256274f54dbd48c564425c3b4c787b4fde323cfbe4f53",
+              "schemas/03_processing.sql": "72a1d020ddebe2739d6954631b3511778ac0c084329b06a6ffd8a71a47c142ff",
+              "schemas/04_batches.sql": "f0ff67c6d3012845e6337ce51ea6c0db5f0122855a5574fb4f88723fc4087e44"
+            }
+          }
+        }
+      },
+      {
+        "member_id": "S2B_T34UDA_20250610T095316_L2A-river-mndwi",
+        "request_id": "request-b3756f7abeca6345f022c4bb6edc871946f1a5d838887984c7112b5dffe5d50b",
+        "spec": {
+          "stage": "optical_product_v1",
+          "product": {
+            "name": "mndwi",
+            "version": "1.0.0",
+            "source_sha256": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+            "required_bands": [
+              "green",
+              "swir16"
+            ],
+            "output_roles": [
+              "index",
+              "water"
+            ],
+            "primary_role": "index",
+            "nominal_range": [
+              -1.0,
+              1.0
+            ]
+          },
+          "parameters": {
+            "epsilon": 1e-06,
+            "threshold": 0.0
+          },
+          "preparation": {
+            "resolution_m": 20,
+            "mask_policy": "scl",
+            "excluded_scl": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          "grid": {
+            "crs": "EPSG:32634",
+            "transform": [
+              20,
+              0,
+              421940,
+              0,
+              -20,
+              5545880
+            ],
+            "shape": [
+              114,
+              110
+            ],
+            "aoi_bbox": [
+              19.91,
+              50.04,
+              19.94,
+              50.06
+            ]
+          },
+          "inputs": {
+            "green": {
+              "artifact_id": "input-3a2ac8f8e85c434e94ec3f0b0ea24dab8318eb8728787d88a804b6bdfffba556",
+              "source_artifact_id": "3a2ac8f8e85c434e94ec3f0b0ea24dab8318eb8728787d88a804b6bdfffba556",
+              "sha256": "6481f89140cfcfe9eece3932fdf1f631166e5a3a90880e88d1d1c33657dbb387",
+              "size_bytes": 77524,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "green",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  229,
+                  221
+                ],
+                "source_shape": [
+                  10980,
+                  10980
+                ],
+                "source_transform": [
+                  10.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -10.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/B03.tif",
+                "transform": [
+                  10.0,
+                  0.0,
+                  421930.0,
+                  0.0,
+                  -10.0,
+                  5545890.0
+                ],
+                "window": [
+                  2197,
+                  5415,
+                  221,
+                  229
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "green",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2B_T34UDA_20250610T095316_L2A",
+                "metadata_sha256": "8af18fbfa9659997a3e1ab04e04765c90aeea666182c3cc9360557bc7ab1e30f",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/B03.tif"
+              }
+            },
+            "scl": {
+              "artifact_id": "input-8ead6bb48633aad6541583938c065214e33fe2abec6a4955ce277f685ed28480",
+              "source_artifact_id": "8ead6bb48633aad6541583938c065214e33fe2abec6a4955ce277f685ed28480",
+              "sha256": "33e5829f4c977e36db80ab22d47fd3d19b1db7e2de489e9acc2396b5712b0e26",
+              "size_bytes": 3022,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "scl",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint8",
+                "nodata": 0,
+                "offset": 0.0,
+                "recipe": "native-context-v1",
+                "scale": 1.0,
+                "shape": [
+                  116,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/SCL.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  421920.0,
+                  0.0,
+                  -20.0,
+                  5545900.0
+                ],
+                "window": [
+                  1098,
+                  2707,
+                  112,
+                  116
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "scl",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2B_T34UDA_20250610T095316_L2A",
+                "metadata_sha256": "a78a8aeb276c3340cab62c0ff9577d6b1a611213f1b4b82917b66563f24d2f5a",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/SCL.tif"
+              }
+            },
+            "swir16": {
+              "artifact_id": "input-134b8b35654f196f5ce8c60bbf6f9103c5b9c28f0e21c93a74c510581366f2a0",
+              "source_artifact_id": "134b8b35654f196f5ce8c60bbf6f9103c5b9c28f0e21c93a74c510581366f2a0",
+              "sha256": "ac443f344d9fe58aa174d241c43cfbee888a338d5f052de35e09e77f9b295f2a",
+              "size_bytes": 22040,
+              "raster": {
+                "aoi_bbox": [
+                  19.91,
+                  50.04,
+                  19.94,
+                  50.06
+                ],
+                "asset_key": "swir16",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  116,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/B11.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  421920.0,
+                  0.0,
+                  -20.0,
+                  5545900.0
+                ],
+                "window": [
+                  1098,
+                  2707,
+                  112,
+                  116
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.91,
+                    50.04,
+                    19.94,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "48e7066dc2510b10454cbc305c90ecb47f71c0966d733d6ab4ec2630c8745724",
+                "asset_key": "swir16",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2B_T34UDA_20250610T095316_L2A",
+                "metadata_sha256": "cc9a42361f7567b3becc73da7a645e90cef5d1349b8c95950873e5b894299325",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/B11.tif"
+              }
+            }
+          },
+          "environment": {
+            "policy": "exact_environment_v1",
+            "package": "1.0.0",
+            "python": "3.12.13",
+            "system": "Darwin",
+            "machine": "arm64",
+            "numpy": "2.4.4",
+            "rasterio": "1.5.0",
+            "gdal": "3.12.1",
+            "proj": "9.7.1",
+            "processing_code_sha256": {
+              "common.py": "d0d36981e1e3d93ab14b1fd65dc4dbb4f4cb8f770d185a1a058860c381354c1a",
+              "database.py": "510e12dbba64d5c471f113a4fe50fd5ce3ac5d3267310bd86b2e3444ebd44754",
+              "planning.py": "af54acffeb2a86aa54090580786d8b9c1fa255526bb3595a0856829036acf019",
+              "products.py": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+              "preparation.py": "520c3be7af0ac541cba76297dae8d19558d6cd9373b53641e7c090b7ddc46023",
+              "runner.py": "2970a72ca8bad9f5605b19141eeb5c7a423db94cc3e6b5c0d68c36b69ba5c0ca",
+              "acquisition.py": "7dccd2cd71716d99f11256274f54dbd48c564425c3b4c787b4fde323cfbe4f53",
+              "schemas/03_processing.sql": "72a1d020ddebe2739d6954631b3511778ac0c084329b06a6ffd8a71a47c142ff",
+              "schemas/04_batches.sql": "f0ff67c6d3012845e6337ce51ea6c0db5f0122855a5574fb4f88723fc4087e44"
+            }
+          }
+        }
+      },
+      {
+        "member_id": "S2B_T34UDA_20250610T095316_L2A-east-mndwi",
+        "request_id": "request-61aeb2143181c18125aa52e4bff7e2b30b54f9e5b6638280e64336fa24260c40",
+        "spec": {
+          "stage": "optical_product_v1",
+          "product": {
+            "name": "mndwi",
+            "version": "1.0.0",
+            "source_sha256": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+            "required_bands": [
+              "green",
+              "swir16"
+            ],
+            "output_roles": [
+              "index",
+              "water"
+            ],
+            "primary_role": "index",
+            "nominal_range": [
+              -1.0,
+              1.0
+            ]
+          },
+          "parameters": {
+            "epsilon": 1e-06,
+            "threshold": 0.0
+          },
+          "preparation": {
+            "resolution_m": 20,
+            "mask_policy": "scl",
+            "excluded_scl": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              11
+            ]
+          },
+          "grid": {
+            "crs": "EPSG:32634",
+            "transform": [
+              20,
+              0,
+              424080,
+              0,
+              -20,
+              5545840
+            ],
+            "shape": [
+              113,
+              110
+            ],
+            "aoi_bbox": [
+              19.94,
+              50.04,
+              19.97,
+              50.06
+            ]
+          },
+          "inputs": {
+            "green": {
+              "artifact_id": "input-82f39b7179373b9e8ed5bc57a0654728abc1de26c60c5b8a93e6754446de5baa",
+              "source_artifact_id": "82f39b7179373b9e8ed5bc57a0654728abc1de26c60c5b8a93e6754446de5baa",
+              "sha256": "b734c96f657f32222ad80a9f9f0a1116ea65be295d925b5017d53f8a67f9f711",
+              "size_bytes": 77360,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "green",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  228,
+                  221
+                ],
+                "source_shape": [
+                  10980,
+                  10980
+                ],
+                "source_transform": [
+                  10.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -10.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/B03.tif",
+                "transform": [
+                  10.0,
+                  0.0,
+                  424080.0,
+                  0.0,
+                  -10.0,
+                  5545850.0
+                ],
+                "window": [
+                  2412,
+                  5419,
+                  221,
+                  228
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "green",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2B_T34UDA_20250610T095316_L2A",
+                "metadata_sha256": "8af18fbfa9659997a3e1ab04e04765c90aeea666182c3cc9360557bc7ab1e30f",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/B03.tif"
+              }
+            },
+            "scl": {
+              "artifact_id": "input-3d53bb567760b49e1c0ddc18d8d5da00ced75b7c982ab5263637f7ec9959a131",
+              "source_artifact_id": "3d53bb567760b49e1c0ddc18d8d5da00ced75b7c982ab5263637f7ec9959a131",
+              "sha256": "866f6542f9f4c6e2bc65ebe7ddb16a691937186ce73a623e666049b720fa2da2",
+              "size_bytes": 2946,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "scl",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint8",
+                "nodata": 0,
+                "offset": 0.0,
+                "recipe": "native-context-v1",
+                "scale": 1.0,
+                "shape": [
+                  115,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/SCL.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  424060.0,
+                  0.0,
+                  -20.0,
+                  5545860.0
+                ],
+                "window": [
+                  1205,
+                  2709,
+                  112,
+                  115
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "scl",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2B_T34UDA_20250610T095316_L2A",
+                "metadata_sha256": "a78a8aeb276c3340cab62c0ff9577d6b1a611213f1b4b82917b66563f24d2f5a",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/SCL.tif"
+              }
+            },
+            "swir16": {
+              "artifact_id": "input-d26a15277f1de2ab457ce7344adeb4e3c53471b6154a7209e90491aa1098ed19",
+              "source_artifact_id": "d26a15277f1de2ab457ce7344adeb4e3c53471b6154a7209e90491aa1098ed19",
+              "sha256": "1309719ad9d32cc29d1c984a1e64a6e725fad28991d1391e8ba1ebde960c0be6",
+              "size_bytes": 21934,
+              "raster": {
+                "aoi_bbox": [
+                  19.94,
+                  50.04,
+                  19.97,
+                  50.06
+                ],
+                "asset_key": "swir16",
+                "calibration_basis": "Collection 1 STAC raster:bands; applied only in processing",
+                "crs": "EPSG:32634",
+                "dtype": "uint16",
+                "nodata": 0,
+                "offset": -0.1,
+                "recipe": "native-context-v1",
+                "scale": 0.0001,
+                "shape": [
+                  115,
+                  112
+                ],
+                "source_shape": [
+                  5490,
+                  5490
+                ],
+                "source_transform": [
+                  20.0,
+                  0.0,
+                  399960.0,
+                  0.0,
+                  -20.0,
+                  5600040.0
+                ],
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/B11.tif",
+                "transform": [
+                  20.0,
+                  0.0,
+                  424060.0,
+                  0.0,
+                  -20.0,
+                  5545860.0
+                ],
+                "window": [
+                  1205,
+                  2709,
+                  112,
+                  115
+                ]
+              },
+              "lineage": {
+                "aoi": {
+                  "bbox": [
+                    19.94,
+                    50.04,
+                    19.97,
+                    50.06
+                  ],
+                  "crs": "EPSG:4326"
+                },
+                "aoi_key": "394493aeb76b6cb3445ef68c015fdceb44e09d9e4972d96c66e58e8403b87355",
+                "asset_key": "swir16",
+                "collection": "sentinel-2-c1-l2a",
+                "item_id": "S2B_T34UDA_20250610T095316_L2A",
+                "metadata_sha256": "cc9a42361f7567b3becc73da7a645e90cef5d1349b8c95950873e5b894299325",
+                "recipe_version": "native-context-v1",
+                "source_url": "https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/34/U/DA/2025/6/S2B_T34UDA_20250610T095316_L2A/B11.tif"
+              }
+            }
+          },
+          "environment": {
+            "policy": "exact_environment_v1",
+            "package": "1.0.0",
+            "python": "3.12.13",
+            "system": "Darwin",
+            "machine": "arm64",
+            "numpy": "2.4.4",
+            "rasterio": "1.5.0",
+            "gdal": "3.12.1",
+            "proj": "9.7.1",
+            "processing_code_sha256": {
+              "common.py": "d0d36981e1e3d93ab14b1fd65dc4dbb4f4cb8f770d185a1a058860c381354c1a",
+              "database.py": "510e12dbba64d5c471f113a4fe50fd5ce3ac5d3267310bd86b2e3444ebd44754",
+              "planning.py": "af54acffeb2a86aa54090580786d8b9c1fa255526bb3595a0856829036acf019",
+              "products.py": "92b91c9194af26097771d39c4d2e8a082e283246529f0e69a582854db866bc24",
+              "preparation.py": "520c3be7af0ac541cba76297dae8d19558d6cd9373b53641e7c090b7ddc46023",
+              "runner.py": "2970a72ca8bad9f5605b19141eeb5c7a423db94cc3e6b5c0d68c36b69ba5c0ca",
+              "acquisition.py": "7dccd2cd71716d99f11256274f54dbd48c564425c3b4c787b4fde323cfbe4f53",
+              "schemas/03_processing.sql": "72a1d020ddebe2739d6954631b3511778ac0c084329b06a6ffd8a71a47c142ff",
+              "schemas/04_batches.sql": "f0ff67c6d3012845e6337ce51ea6c0db5f0122855a5574fb4f88723fc4087e44"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "runtime": {
+    "database": "/Users/bartlomiejwozniczka/Desktop/Automated_Workflows/Labs/Lab06/work/demo/catalogue.sqlite",
+    "workspace": "/Users/bartlomiejwozniczka/Desktop/Automated_Workflows/Labs/Lab06/work/demo",
+    "plugins": {},
+    "original_config": "{\n  \"database\": \"catalogue.sqlite\",\n  \"workspace\": \".\",\n  \"max_attempts\": 2,\n  \"jobs\": [\n    {\n      \"member_id\": \"S2A_T34UDA_20250604T094637_L2A-river-mndwi\",\n      \"item_id\": \"S2A_T34UDA_20250604T094637_L2A\",\n      \"aoi_bbox\": [\n        19.91,\n        50.04,\n        19.94,\n        50.06\n      ],\n      \"product\": \"mndwi\",\n      \"parameters\": {\n        \"threshold\": 0.0\n      }\n    },\n    {\n      \"member_id\": \"S2A_T34UDA_20250604T094637_L2A-east-mndwi\",\n      \"item_id\": \"S2A_T34UDA_20250604T094637_L2A\",\n      \"aoi_bbox\": [\n        19.94,\n        50.04,\n        19.97,\n        50.06\n      ],\n      \"product\": \"mndwi\",\n      \"parameters\": {\n        \"threshold\": 0.0\n      }\n    },\n    {\n      \"member_id\": \"S2C_T34UDA_20250605T095638_L2A-river-mndwi\",\n      \"item_id\": \"S2C_T34UDA_20250605T095638_L2A\",\n      \"aoi_bbox\": [\n        19.91,\n        50.04,\n        19.94,\n        50.06\n      ],\n      \"product\": \"mndwi\",\n      \"parameters\": {\n        \"threshold\": 0.0\n      }\n    },\n    {\n      \"member_id\": \"S2C_T34UDA_20250605T095638_L2A-east-mndwi\",\n      \"item_id\": \"S2C_T34UDA_20250605T095638_L2A\",\n      \"aoi_bbox\": [\n        19.94,\n        50.04,\n        19.97,\n        50.06\n      ],\n      \"product\": \"mndwi\",\n      \"parameters\": {\n        \"threshold\": 0.0\n      }\n    },\n    {\n      \"member_id\": \"S2B_T34UDA_20250610T095316_L2A-river-mndwi\",\n      \"item_id\": \"S2B_T34UDA_20250610T095316_L2A\",\n      \"aoi_bbox\": [\n        19.91,\n        50.04,\n        19.94,\n        50.06\n      ],\n      \"product\": \"mndwi\",\n      \"parameters\": {\n        \"threshold\": 0.0\n      }\n    },\n    {\n      \"member_id\": \"S2B_T34UDA_20250610T095316_L2A-east-mndwi\",\n      \"item_id\": \"S2B_T34UDA_20250610T095316_L2A\",\n      \"aoi_bbox\": [\n        19.94,\n        50.04,\n        19.97,\n        50.06\n      ],\n      \"product\": \"mndwi\",\n      \"parameters\": {\n        \"threshold\": 0.0\n      }\n    }\n  ]\n}\n"
+  }
+}

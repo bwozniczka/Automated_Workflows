@@ -1,0 +1,91 @@
+{
+  "database": "catalogue.sqlite",
+  "workspace": ".",
+  "max_attempts": 2,
+  "jobs": [
+    {
+      "member_id": "S2A_T34UDA_20250604T094637_L2A-river-mndwi",
+      "item_id": "S2A_T34UDA_20250604T094637_L2A",
+      "aoi_bbox": [
+        19.91,
+        50.04,
+        19.94,
+        50.06
+      ],
+      "product": "mndwi",
+      "parameters": {
+        "threshold": 0.0
+      }
+    },
+    {
+      "member_id": "S2A_T34UDA_20250604T094637_L2A-east-mndwi",
+      "item_id": "S2A_T34UDA_20250604T094637_L2A",
+      "aoi_bbox": [
+        19.94,
+        50.04,
+        19.97,
+        50.06
+      ],
+      "product": "mndwi",
+      "parameters": {
+        "threshold": 0.0
+      }
+    },
+    {
+      "member_id": "S2C_T34UDA_20250605T095638_L2A-river-mndwi",
+      "item_id": "S2C_T34UDA_20250605T095638_L2A",
+      "aoi_bbox": [
+        19.91,
+        50.04,
+        19.94,
+        50.06
+      ],
+      "product": "mndwi",
+      "parameters": {
+        "threshold": 0.0
+      }
+    },
+    {
+      "member_id": "S2C_T34UDA_20250605T095638_L2A-east-mndwi",
+      "item_id": "S2C_T34UDA_20250605T095638_L2A",
+      "aoi_bbox": [
+        19.94,
+        50.04,
+        19.97,
+        50.06
+      ],
+      "product": "mndwi",
+      "parameters": {
+        "threshold": 0.0
+      }
+    },
+    {
+      "member_id": "S2B_T34UDA_20250610T095316_L2A-river-mndwi",
+      "item_id": "S2B_T34UDA_20250610T095316_L2A",
+      "aoi_bbox": [
+        19.91,
+        50.04,
+        19.94,
+        50.06
+      ],
+      "product": "mndwi",
+      "parameters": {
+        "threshold": 0.0
+      }
+    },
+    {
+      "member_id": "S2B_T34UDA_20250610T095316_L2A-east-mndwi",
+      "item_id": "S2B_T34UDA_20250610T095316_L2A",
+      "aoi_bbox": [
+        19.94,
+        50.04,
+        19.97,
+        50.06
+      ],
+      "product": "mndwi",
+      "parameters": {
+        "threshold": 0.0
+      }
+    }
+  ]
+}

@@ -4,18 +4,48 @@
   "max_attempts": 2,
   "jobs": [
     {
-      "member_id": "my_aoi_my_product",
-      "item_id": "REPLACE_WITH_AN_ITEM_FROM_SEARCH",
+      "member_id": "wolski-20250605-ndmi",
+      "item_id": "S2C_T34UDA_20250605T095638_L2A",
       "aoi_bbox": [
-        19.91,
-        50.04,
-        19.94,
-        50.06
+        19.85,
+        50.05,
+        19.88,
+        50.07
       ],
-      "product": "my_product",
-      "plugin": "../extensions/my_product.py",
+      "product": "ndmi",
+      "plugin": "../extensions/ndmi.py",
       "parameters": {
-        "epsilon": 1e-06
+        "moist_threshold": 0.1
+      },
+      "preparation": {
+        "resolution_m": 20,
+        "mask_policy": "scl",
+        "excluded_scl": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "member_id": "wolski-20250615-ndmi",
+      "item_id": "S2C_T34UDA_20250615T095047_L2A",
+      "aoi_bbox": [
+        19.85,
+        50.05,
+        19.88,
+        50.07
+      ],
+      "product": "ndmi",
+      "plugin": "../extensions/ndmi.py",
+      "parameters": {
+        "moist_threshold": 0.1
       },
       "preparation": {
         "resolution_m": 20,

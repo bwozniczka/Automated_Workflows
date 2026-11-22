@@ -55,3 +55,14 @@ FROM processing_attempts
 WHERE status='succeeded' AND json_extract(receipt_json,'$.contract')='optical-product-v1';
 
 -- Add your own question, SQL and interpretation below.
+
+-- Q: For one clear-river attempt, how did successive QC policies differ without new processing?
+-- Attempt attempt-6650dbe0562f461db39f8e33fb175346 (S2C 5 June river, threshold 0.0):
+-- assessment 3 accepted at minimum_valid_fraction=0.5; assessment 10 rejected at 0.995.
+-- Interpretation: assess appends judgments; processing_attempts status stays succeeded.
+SELECT assessment_id, outcome,
+       json_extract(policy_json,'$.minimum_valid_fraction') AS min_valid,
+       json_extract(metrics_json,'$.valid_fraction') AS observed_valid
+FROM scientific_qc_assessments
+WHERE attempt_id='attempt-6650dbe0562f461db39f8e33fb175346'
+ORDER BY assessment_id;

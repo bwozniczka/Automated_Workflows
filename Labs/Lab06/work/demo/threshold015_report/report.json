@@ -1,0 +1,158 @@
+{
+  "batch_id": "batch-2e87901b41e731ba65ad91f80710e829df5467ac69991eae0e89d133dc620979",
+  "generated_at": "2026-11-22T12:32:04.855485Z",
+  "members": [
+    {
+      "member_id": "river-clear-date-mndwi",
+      "request_id": "request-749866393b91844da150989af20c506c9bf4f7033f2a568a4511b5597eb09f07",
+      "state": "complete",
+      "reason": "All declared outputs were verified against the producing attempt",
+      "attempts_used": 1,
+      "attempts": [
+        {
+          "attempt_id": "attempt-3007a3eff7214ff686410de5ffc8866b",
+          "status": "succeeded",
+          "stage": "complete",
+          "error_code": null,
+          "error_message": null,
+          "log_path": "/Users/bartlomiejwozniczka/Desktop/Automated_Workflows/Labs/Lab06/work/demo/logs/attempt-3007a3eff7214ff686410de5ffc8866b.jsonl"
+        }
+      ],
+      "result": {
+        "attempt_id": "attempt-3007a3eff7214ff686410de5ffc8866b",
+        "paths": {
+          "index": "/Users/bartlomiejwozniczka/Desktop/Automated_Workflows/Labs/Lab06/work/demo/outputs/attempt-3007a3eff7214ff686410de5ffc8866b/index.tif",
+          "valid_mask": "/Users/bartlomiejwozniczka/Desktop/Automated_Workflows/Labs/Lab06/work/demo/outputs/attempt-3007a3eff7214ff686410de5ffc8866b/valid_mask.tif",
+          "water": "/Users/bartlomiejwozniczka/Desktop/Automated_Workflows/Labs/Lab06/work/demo/outputs/attempt-3007a3eff7214ff686410de5ffc8866b/water.tif"
+        },
+        "receipt": {
+          "attempt_id": "attempt-3007a3eff7214ff686410de5ffc8866b",
+          "contract": "optical-product-v1",
+          "grid": {
+            "aoi_bbox": [
+              19.91,
+              50.04,
+              19.94,
+              50.06
+            ],
+            "crs": "EPSG:32634",
+            "shape": [
+              114,
+              110
+            ],
+            "transform": [
+              20,
+              0,
+              421940,
+              0,
+              -20,
+              5545880
+            ]
+          },
+          "layers": {
+            "index": {
+              "filename": "index.tif",
+              "sha256": "ec0ad9636c66bdb0bc2daff242778335733357c1236147019d3fc1d8387392a2",
+              "size_bytes": 43443
+            },
+            "valid_mask": {
+              "filename": "valid_mask.tif",
+              "sha256": "7b265d0c7ce9f6d511182721092ecd566bf86d62a6e0acf1cb9aa5b5d46aa30a",
+              "size_bytes": 1616
+            },
+            "water": {
+              "filename": "water.tif",
+              "sha256": "993c9bf8357d803ff60ccd884e2ac3459053730f61dc537a2a184c602ca32f76",
+              "size_bytes": 1825
+            }
+          },
+          "metrics": {
+            "aoi_pixels": 11926,
+            "area_convention": "projected UTM grid area; pixel centers inside AOI",
+            "clear_input_fraction": 0.9939627704175751,
+            "clear_input_pixels": 11854,
+            "cloud_screened": true,
+            "denominator_or_product_rejected_pixels": 0,
+            "excluded_scl": [
+              0,
+              1,
+              2,
+              3,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "grid_pixels": 12540,
+            "mask_policy": "scl",
+            "maximum": 0.465798020362854,
+            "mean": -0.3419964611530304,
+            "minimum": -0.6638950705528259,
+            "outside_nominal_range": 0,
+            "pixel_area_m2": 400.0,
+            "product_metrics": {
+              "candidate_water_area_m2": 181600.0,
+              "candidate_water_pixels": 454,
+              "observed_area_m2": 4741600.0,
+              "threshold": 0.15
+            },
+            "raw_valid_fraction": 1.0,
+            "raw_valid_pixels": 11926,
+            "reflectance_resampling": "average; require >=0.999 valid source fraction",
+            "scl_counts_in_aoi": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "2": 72,
+              "3": 0,
+              "4": 6630,
+              "5": 4663,
+              "6": 561,
+              "7": 0,
+              "8": 0,
+              "9": 0
+            },
+            "scl_resampling": "nearest",
+            "valid_fraction": 0.9939627704175751,
+            "valid_pixels": 11854
+          },
+          "request_id": "request-749866393b91844da150989af20c506c9bf4f7033f2a568a4511b5597eb09f07"
+        },
+        "checked_at": "2026-11-22T12:32:04.855125Z"
+      },
+      "rejected_results": [],
+      "product": "mndwi",
+      "grid": {
+        "crs": "EPSG:32634",
+        "transform": [
+          20,
+          0,
+          421940,
+          0,
+          -20,
+          5545880
+        ],
+        "shape": [
+          114,
+          110
+        ],
+        "aoi_bbox": [
+          19.91,
+          50.04,
+          19.94,
+          50.06
+        ]
+      },
+      "qc": null
+    }
+  ],
+  "counts": {
+    "ready": 0,
+    "complete": 1,
+    "blocked": 0,
+    "unresolved": 0,
+    "failed": 0
+  }
+}
